@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Proyecto 1 - Análisis Morfosintáctico</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 20px;
+    }
+    .contenedor {
+      max-width: 800px;
+      margin: 0 auto;
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+    .volver {
+      display: inline-block;
+      margin-bottom: 20px;
+      text-decoration: none;
+      color: white;
+      background-color: #2980b9;
+      padding: 8px 16px;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+    .volver:hover { background-color: #1a5276; }
+
+    h1 { color: #2c3e50; margin-bottom: 5px; }
+    h2 { color: #2c3e50; border-bottom: 2px solid #2980b9; padding-bottom: 6px; margin-top: 25px; }
+
+    .imagen-proyecto {
+      width: 100%;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      margin: 20px 0;
+    }
+
+    .img-placeholder {
+      width: 100%;
+      height: 260px;
+      background: linear-gradient(135deg, #4c0080, #9333ea);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 4rem;
+      margin: 20px 0;
+    }
+
+    .tecnologias {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+    }
+    .tech {
+      background-color: #d6eaf8;
+      color: #1a5276;
+      padding: 5px 12px;
+      border-radius: 4px;
+      font-size: 13px;
+      border: 1px solid #a9cce3;
+    }
+
+    p { font-size: 14px; color: #444; line-height: 1.7; }
+
+    footer { margin-top: 40px; text-align: center; font-size: 12px; color: #999; }
+  </style>
+</head>
+<body>
+
+<div class="contenedor">
+
+  <a href="index.html" class="volver">← Volver al CV</a>
+
+  <h1>Análisis Morfosintáctico de Letras Musicales</h1>
+
+  <!-- Imagen del proyecto -->
+  <img src="Analisis.png" alt="Dashboard Análisis Morfosintáctico" class="imagen-proyecto"
+       onerror="this.style.display='none'; document.getElementById('placeholder1').style.display='flex';">
+  <div id="placeholder1" class="img-placeholder" style="display:none;"></div>
+
+  <h2>¿Para qué fue desarrollado?</h2>
+  <p>
+    Este proyecto fue desarrollado para explorar patrones lingüísticos en un corpus de 7,936 canciones de distintos géneros musicales. El objetivo principal es visualizar información sobre la estructura literaria del lenguaje musical: ¿qué categorías gramaticales dominan en el reggaeton versus el rock? ¿Ha cambiado la riqueza léxica a lo largo de las décadas?
+  </p>
+
+  <h2>Tecnologías utilizadas</h2>
+  <div class="tecnologias">
+    <span class="tech">Python</span>
+    <span class="tech">NLTK</span>
+    <span class="tech">spaCy</span>
+    <span class="tech">Pandas</span>
+    <span class="tech">Matplotlib</span>
+    <span class="tech">HTML5</span>
+    <span class="tech">CSS3</span>
+    <span class="tech">JavaScript</span>
+  </div>
+
+  <h2>Descripción</h2>
+  <p>
+    El sistema procesa letras de canciones en texto plano, aplica limpieza y normalización, luego ejecuta NLTK y spaCy para obtener el POS tag (categoría gramatical) de cada token. Los resultados se agregan por género, artista y año.
+  </p>
+  <p>
+    El dashboard web resultante tiene 6 secciones: EDA (exploración de géneros, artistas y longitud), POS Tags (comparación NLTK vs spaCy), Análisis Morfológico (densidad léxica), Géneros (comparación lingüística), Evolución Temporal y Métricas globales. Procesa aproximadamente 2 millones de tokens en total.
+  </p>
+
+  <footer>Kendall Solano Solís &mdash; <a href="index.html" style="color:#2980b9;">← Regresar al CV</a></footer>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Proyecto 2 - Employee Login</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 20px;
+    }
+    .contenedor {
+      max-width: 800px;
+      margin: 0 auto;
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+    .volver {
+      display: inline-block;
+      margin-bottom: 20px;
+      text-decoration: none;
+      color: white;
+      background-color: #2980b9;
+      padding: 8px 16px;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+    .volver:hover { background-color: #1a5276; }
+
+    h1 { color: #2c3e50; margin-bottom: 5px; }
+    h2 { color: #2c3e50; border-bottom: 2px solid #2980b9; padding-bottom: 6px; margin-top: 25px; }
+
+    .imagen-proyecto {
+      width: 100%;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      margin: 20px 0;
+    }
+
+    .img-placeholder {
+      width: 100%;
+      height: 260px;
+      background: linear-gradient(135deg, #001122, #003355, #00a8cc);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 4rem;
+      margin: 20px 0;
+    }
+
+    .tecnologias {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+    }
+    .tech {
+      background-color: #d6eaf8;
+      color: #1a5276;
+      padding: 5px 12px;
+      border-radius: 4px;
+      font-size: 13px;
+      border: 1px solid #a9cce3;
+    }
+
+    p { font-size: 14px; color: #444; line-height: 1.7; }
+
+    .funciones {
+      background: #f4f6f7;
+      border-left: 4px solid #2980b9;
+      padding: 14px 18px;
+      border-radius: 4px;
+      margin: 10px 0;
+    }
+    .funciones ul { margin: 8px 0 0 18px; }
+    .funciones li { margin-bottom: 5px; font-size: 14px; color: #444; }
+
+    footer { margin-top: 40px; text-align: center; font-size: 12px; color: #999; }
+  </style>
+</head>
+<body>
+
+<div class="contenedor">
+
+  <a href="index.html" class="volver">← Volver al CV</a>
+
+  <h1>Employee Login — Control de Asistencia</h1>
+
+  <!-- Imagen -->
+  <img src="employee.png" alt="Employee Login" class="imagen-proyecto"
+       onerror="this.style.display='none'; document.getElementById('placeholder2').style.display='flex';">
+  <div id="placeholder2" class="img-placeholder" style="display:none;"></div>
+
+  <h2>¿Para qué fue desarrollado?</h2>
+  <p>
+    Sistema web diseñado para que las empresas puedan llevar un control digital de la asistencia de sus empleados. Reemplaza los registros manuales en papel permitiendo marcar entradas y salidas desde cualquier dispositivo con acceso al navegador.
+  </p>
+
+  <h2>Tecnologías utilizadas</h2>
+  <div class="tecnologias">
+    <span class="tech">PHP</span>
+    <span class="tech">HTML5</span>
+    <span class="tech">CSS3</span>
+    <span class="tech">JavaScript</span>
+    <span class="tech">MySQL</span>
+  </div>
+
+  <h2>Funcionalidades principales</h2>
+  <div class="funciones">
+    <ul>
+      <li><strong>Entrada:</strong> El empleado registra su nombre, departamento, hora y fecha de ingreso.</li>
+      <li><strong>Salida:</strong> Marcado de salida vinculado al registro de entrada del mismo día.</li>
+      <li><strong>Panel de Jefes:</strong> Vista administrativa para revisar la asistencia por departamento.</li>
+    </ul>
+  </div>
+
+  <h2>Descripción</h2>
+  <p>
+    El frontend usa HTML y CSS con diseño oscuro y acentos en cyan. El backend en PHP procesa los formularios y realiza las operaciones sobre la base de datos MySQL. El sistema valida que no existan duplicados para la misma jornada y permite a los supervisores consultar en tiempo real quién está presente y en qué horario ingresó.
+  </p>
+
+  <footer>Kendall Solano Solís &mdash; <a href="index.html" style="color:#2980b9;">← Regresar al CV</a></footer>
+
+</div>
+</body>
+</html>

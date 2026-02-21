@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>CV - Kendall Solano Solís</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .contenedor {
+      max-width: 800px;
+      margin: 0 auto;
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+
+    h1 {
+      color: #2c3e50;
+      margin-bottom: 5px;
+    }
+
+    .info-personal {
+      background-color: #eaf4fb;
+      border-left: 4px solid #2980b9;
+      padding: 15px 20px;
+      margin: 20px 0;
+      border-radius: 4px;
+    }
+
+    .info-personal p {
+      margin: 6px 0;
+      font-size: 15px;
+    }
+
+    h2 {
+      color: #2c3e50;
+      border-bottom: 2px solid #2980b9;
+      padding-bottom: 6px;
+      margin-top: 30px;
+    }
+
+    /* Botones selector */
+    .botones {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin: 15px 0;
+    }
+
+    .btn {
+      padding: 9px 18px;
+      background-color: #2980b9;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .btn:hover {
+      background-color: #1a5276;
+    }
+
+    .btn.activo {
+      background-color: #1a5276;
+      outline: 2px solid #85c1e9;
+    }
+
+    /* Paneles de información */
+    .panel {
+      display: none;
+      background-color: #f9f9f9;
+      border: 1px solid #d0d0d0;
+      border-radius: 6px;
+      padding: 20px;
+      margin-top: 10px;
+      line-height: 1.7;
+      font-size: 14px;
+      color: #333;
+    }
+
+    .panel ul {
+      margin: 8px 0 0 20px;
+    }
+
+    .panel li {
+      margin-bottom: 5px;
+    }
+
+    /* Proyectos */
+    .proyectos {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-top: 15px;
+    }
+
+    .proyecto-card {
+      display: block;
+      text-decoration: none;
+      color: #2c3e50;
+      background: #f4f6f7;
+      border: 1px solid #bdc3c7;
+      border-radius: 6px;
+      padding: 18px 20px;
+      transition: background 0.2s;
+    }
+
+    .proyecto-card:hover {
+      background: #d6eaf8;
+      border-color: #2980b9;
+    }
+
+    .proyecto-card h3 {
+      margin: 0 0 6px 0;
+      color: #2980b9;
+      font-size: 16px;
+    }
+
+    .proyecto-card p {
+      margin: 0;
+      font-size: 13px;
+      color: #666;
+    }
+
+    footer {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 12px;
+      color: #999;
+    }
+  </style>
+</head>
+<body>
+
+<div class="contenedor">
+
+  <h1>Kendall Solano Solís</h1>
+  <p style="color:#666; margin:0;">Desarrollador de Software</p>
+
+  <!-- Datos siempre visibles -->
+  <div class="info-personal">
+    <p><strong>Teléfono:</strong> +506 8854-9558</p>
+    <p><strong>Correo:</strong> kendalls02265@gmail.com</p>
+    <p><strong>Ubicación:</strong> Cartago, Costa Rica</p>
+  </div>
+
+  <!-- Sección con paneles -->
+  <h2>Sobre mí</h2>
+  <p style="font-size:14px; color:#555;">Seleccione una opción para ver más información:</p>
+
+  <div class="botones">
+    <button class="btn" onclick="mostrarPanel('cualidades', this)">Cualidades</button>
+    <button class="btn" onclick="mostrarPanel('tecnicas', this)">Habilidades Técnicas</button>
+    <button class="btn" onclick="mostrarPanel('blandas', this)">Habilidades Blandas</button>
+  </div>
+
+  <div id="cualidades" class="panel">
+    <strong>Cualidades y expectativas</strong>
+    <p>Soy una persona analítica, responsable y con fuerte capacidad autodidacta. Me impulsa la resolución de problemas reales mediante el software. Soy detallista y no me conformo con resultados que no estén bien fundamentados.</p>
+    <p>Mis expectativas profesionales apuntan a crecer en el área de ciencia de datos e ingeniería de software, contribuyendo en equipos donde se valore la calidad técnica y la innovación continua.</p>
+  </div>
+
+  <div id="tecnicas" class="panel">
+    <strong>Habilidades técnicas</strong>
+    <p>He trabajado con diversas tecnologías a lo largo de mis proyectos:</p>
+    <ul>
+      <li>Python (FastAPI, scikit-learn, NLTK, spaCy, Pandas)</li>
+      <li>PHP, HTML5, CSS3, JavaScript</li>
+      <li>ASP.NET (C#)</li>
+      <li>SQL y bases de datos relacionales</li>
+      <li>Diseño y consumo de APIs RESTful</li>
+      <li>Git y GitHub</li>
+      <li>Jupyter Notebook, Machine Learning</li>
+    </ul>
+  </div>
+
+  <div id="blandas" class="panel">
+    <strong>Habilidades blandas</strong>
+    <ul>
+      <li>Comunicación clara y asertiva</li>
+      <li>Trabajo en equipo</li>
+      <li>Gestión del tiempo y cumplimiento de plazos</li>
+      <li>Pensamiento crítico y resolución de problemas</li>
+      <li>Proactividad y aprendizaje continuo</li>
+      <li>Adaptabilidad a distintos entornos de trabajo</li>
+    </ul>
+  </div>
+
+  <!-- Proyectos -->
+  <h2>Proyectos</h2>
+
+  <div class="proyectos">
+    <a href="proyecto1.html" class="proyecto-card">
+      <h3>Análisis Morfosintáctico de Letras Musicales</h3>
+      <p>Dashboard NLP para exploración lingüística de un corpus de canciones usando Python, NLTK y spaCy.</p>
+    </a>
+    <a href="proyecto2.html" class="proyecto-card">
+      <h3>Employee Login — Control de Asistencia</h3>
+      <p>Sistema web para registrar entradas y salidas de empleados por departamento. Desarrollado con PHP y HTML.</p>
+    </a>
+    <a href="proyecto3.html" class="proyecto-card">
+      <h3>API de Predicción de Churn</h3>
+      <p>API REST con redes neuronales para predecir la probabilidad de abandono de clientes. Python y FastAPI.</p>
+    </a>
+  </div>
+
+  <footer>Kendall Solano Solís &mdash; Cartago, Costa Rica &mdash; 2025</footer>
+
+</div>
+
+<script>
+  function mostrarPanel(id, boton) {
+    var paneles = document.querySelectorAll('.panel');
+    var botones = document.querySelectorAll('.btn');
+    var panel = document.getElementById(id);
+
+    // Si ya está abierto, cerrarlo
+    if (panel.style.display === 'block') {
+      panel.style.display = 'none';
+      boton.classList.remove('activo');
+      return;
+    }
+
+    // Cerrar todos
+    paneles.forEach(function(p) { p.style.display = 'none'; });
+    botones.forEach(function(b) { b.classList.remove('activo'); });
+
+    // Abrir el seleccionado
+    panel.style.display = 'block';
+    boton.classList.add('activo');
+  }
+</script>
+
+</body>
+</html>
